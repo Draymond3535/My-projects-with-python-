@@ -1,46 +1,51 @@
-# Write code below 💖
+import random
 
-import random 
+print("🌟 Bienvenue dans le jeu Pierre-Papier-Ciseaux ! 🌟")
+print("✨ Que le meilleur gagne... ou survive 😈 ✨")
 
-print("Rock Paper Scissors")
+a = "✊ Pierre"
+b = "✋ Papier"
+c = "✌️ Ciseaux"
 
-a = "✊"
-b = "✋"
-c = "✌️"
-
+print("\nChoisis ton arme légendaire :")
 print("1)", a)
 print("2)", b)
 print("3)", c)
 
-player = int(input("Pick a number (1-3): "))
-
+player = int(input("➡️ Entre ton choix (1-3) : "))
 computer = random.randint(1,3)
 
-# Show choices
+# Affichage du choix du joueur
 if player == 1:
-    print("You chose:", a)
+    print("\n🧑 Tu as brandi :", a, "🔥")
 elif player == 2:
-    print("You chose:", b)
+    print("\n🧑 Tu dégaines :", b, "✨")
 elif player == 3:
-    print("You chose:", c)
+    print("\n🧑 Tu sors :", c, "⚡")
+else:
+    print("❌ Choix invalide !")
+    exit()
 
+# Affichage du choix de l'ordinateur
 if computer == 1:
-    print("The computer chose:", a)
+    print("🤖 L'ordinateur utilise :", a, "💥")
 elif computer == 2:
-    print("The computer chose:", b)
+    print("🤖 L'ordinateur lance :", b, "🌪️")
 elif computer == 3:
-    print("The computer chose:", c)
+    print("🤖 L'ordinateur joue :", c, "⚔️")
 
-# Game logic
+# Logique du jeu + messages stylés
+print("\n⚔️ Résultat du duel :")
+
 if player == computer:
-    print("It is a tie!")
+    print("😐 Match nul ! Le combat est trop serré... Réessayez !")
 
 elif player == 1 and computer == 3:
-    print("You won!")
+    print("🔥 BOUM ! Pierre écrase Ciseaux ! Tu remportes ce duel ⚡")
 elif player == 2 and computer == 1:
-    print("You won!")
+    print("💫 Papier enveloppe Pierre ! Tu gagnes avec classe ✨")
 elif player == 3 and computer == 2:
-    print("You won!")
+    print("⚡ Ciseaux tranchent Papier ! Victoire éclatante ! 💥")
 
 else:
-    print("You lost!")
+    print("💀 Aïe... L'ordinateur te terrasse cette fois-ci. Garde la tête haute !")
