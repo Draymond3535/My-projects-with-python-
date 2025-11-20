@@ -15,7 +15,6 @@ print("3)", c)
 player = int(input("➡️ Entre ton choix (1-3) : "))
 computer = random.randint(1,3)
 
-# Affichage du choix du joueur
 if player == 1:
     print("\n🧑 Tu as brandi :", a, "🔥")
 elif player == 2:
@@ -26,7 +25,7 @@ else:
     print("❌ Choix invalide !")
     exit()
 
-# Affichage du choix de l'ordinateur
+
 if computer == 1:
     print("🤖 L'ordinateur utilise :", a, "💥")
 elif computer == 2:
@@ -34,7 +33,7 @@ elif computer == 2:
 elif computer == 3:
     print("🤖 L'ordinateur joue :", c, "⚔️")
 
-# Logique du jeu + messages stylés
+
 print("\n⚔️ Résultat du duel :")
 
 if player == computer:
@@ -49,3 +48,4 @@ elif player == 3 and computer == 2:
 
 else:
     print("💀 Aïe... L'ordinateur te terrasse cette fois-ci. Garde la tête haute !")
+
